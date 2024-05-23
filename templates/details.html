@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+details
+{% endblock title %}
+
+{% block bg_color %}
+lightblue
+{% endblock  %}
+
+{% block content %}
+<a href="{% url "post" %}" class='btn btn-success'> back </a>
+<a href="{% url "update" p.id %}"> update </a>
+<a href=""> delete </a>
+<h1>{{p.id}}</h1>
+<p>{{p.title}}</p>
+<p>{{p.body}}</p>
+<small>{{p.created}}</small>
+{% endblock content %}
